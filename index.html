@@ -5,10 +5,113 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <meta charset="utf-8">
     <title>microsung</title>
+    <!--
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/app.js"></script>
+    -->
+    <style>
+      h1 {
+        width: 600px;
+        margin: auto;
+        font-size: 116px;
+        display: block;
+        color: #737373;
+      }
+      .logo {
+        width: 600px;
+        height: 600px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+      }
+
+      .box {
+        width: 280px;
+        height: 280px;
+        margin-bottom: 20px;
+        background-color: #000;
+        transform: rotate(90deg);
+      }
+
+      .box.r {
+        background-color: #F15022;
+      }
+      .box.g {
+        background-color: #7FBA00;
+      }
+      .box.b {
+        background-color: #02A4EF;
+      }
+      .box.y {
+        background-color: #FFB902;
+      }
+
+      .box .photo {
+        width: 280px;
+        height: 280px;
+        opacity: 0;
+        animation: fadeIn 3s;
+        animation-iteration-count: 1;
+        cursor: pointer;
+      }
+
+      @keyframes fadeIn {
+        20% {
+          opacity: 0;
+        }
+
+        80% {
+          opacity: 1;
+        }
+
+        100%{
+          opacity: 0;
+        }
+      }
+
+      .box:hover .photo {
+        opacity: 1;
+      }
+
+      .box.r .photo {
+        background: url(img/r.JPG);
+        background-size: cover;
+      }
+
+      .box.g .photo {
+        background: url(img/g.JPG);
+        background-size: cover;
+      }
+      .box.b .photo {
+        background: url(img/b.JPG);
+        background-size: cover;
+      }
+      .box.y .photo {
+        background: url(img/y.JPG);
+        background-size: cover;
+      }
+
+      .box:nth-child(even) {
+        margin-left: 20px;
+      }
+    </style>
   </head>
   <body>
+    <div class="logo">
+      <div class="r box">
+        <div class="photo"></div>
+      </div>
+      <div class="g box">
+        <div class="photo"></div>
+      </div>
+      <div class="b box">
+        <div class="photo"></div>
+      </div>
+      <div class="y box">
+        <div class="photo"></div>
+      </div>
+    </div>
     <h1>MicroSung</h1>
   </body>
 </html>
